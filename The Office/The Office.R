@@ -92,7 +92,7 @@ ggplot(rating_per_writer %>% filter(imdb_rating > 8.5)) +
   labs(title="Highest Rated Writers") +
   labs(x="Writer", y="IMDB Rating") +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ##Greg Daniels & Mindy Kaling have the highest average rating
 
 
@@ -180,7 +180,7 @@ ggplot(number_of_lines %>% filter(num_lines > 500)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
-##Which seasons were each character in?
+##Whats the first and last season each character was in?
 seasons_per_character <- 
   episode_text %>%
   group_by(character) %>%
@@ -189,6 +189,7 @@ seasons_per_character <-
   select(character, first_season, last_season) %>%
   distinct()
 ##This isn't interesting because most everyone was in the pilot and finale
+##Michael is a good example, min season is 1 and max is 9 but he wasn't in interim seasons
 
 ##Who the heck is Michel?
 episode_text %>%
@@ -196,6 +197,7 @@ episode_text %>%
 ##This is suppsoed to be Michael
 
 ##Replace "Michel" with "Michael"
-
+episode_text[episode_text$character == "Michel",'character'] <- "Michael"
+  
 
 
