@@ -1,0 +1,19 @@
+"0","##Look at frequency of writers
+episodes_per_writer <- 
+  office_data %>%
+  select(writer) %>%
+  group_by(writer) %>%
+  mutate(count_writer = n()) %>%
+  distinct()
+
+ggplot(episodes_per_writer) +
+  geom_bar(aes(reorder(writer, -count_writer), count_writer),
+           alpha = 1, stat=""identity"") +
+  labs(title=""Most Frequent Writers"") +
+  labs(x=""Writer"", y=""Number of Episodes"") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
+##Mindy Kaling wrote the most episodes, followed by BJ Novak"
+"2","'Writer' is not recognized as an internal or external command,
+operable program or batch file.
+"

@@ -1,0 +1,7 @@
+"0","episode_dir_writer <-"
+"0","  episode_dir_writer %>%"
+"0","  arrange(season, episode) %>%"
+"0","  group_by(season) %>%"
+"0","  mutate(episode_reorder = cumsum(counter))"
+"0",""
+"0","episode_dir_writer$season_episode <- paste(episode_dir_writer$season, episode_dir_writer$episode_reorder)"

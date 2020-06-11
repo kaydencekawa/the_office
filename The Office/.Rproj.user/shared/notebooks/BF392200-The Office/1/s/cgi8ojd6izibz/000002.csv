@@ -1,0 +1,18 @@
+"0","#Install Packages
+library(dplyr)
+install.packages(""schrute"")
+library(schrute)
+library(tidyr)
+library(ggplot2)
+
+# Get the Data
+office_ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-17/office_ratings.csv')
+episode_text <- schrute::theoffice
+episode_dir_writer <- episode_text[,2:6]
+
+##Clean episode_dir_writer to get one record per episode
+episode_dir_writer <-
+  distinct(episode_dir_writer)"
+"2","'Install' is not recognized as an internal or external command,
+operable program or batch file.
+"

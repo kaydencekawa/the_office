@@ -1,0 +1,13 @@
+"0","office_ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-17/office_ratings.csv')"
+"2","Parsed with column specification:
+cols(
+  season = [32mcol_double()[39m,
+  episode = [32mcol_double()[39m,
+  title = [31mcol_character()[39m,
+  imdb_rating = [32mcol_double()[39m,
+  total_votes = [32mcol_double()[39m,
+  air_date = [34mcol_date(format = """")[39m
+)
+"
+"0","episode_text <- schrute::theoffice"
+"0","episode_dir_writer <- episode_text[,2:6]"
